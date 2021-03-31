@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    
+    <style>
+        *{
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        body{
+            margin: 0px;
+        }
+        nav{
+            width: 100%;
+            height: 80px;
+            background-color:rgb(245, 243, 238);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .nav{
+            width: 1080px;
+            height: 65px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .menu{
+            width: 670px;
+            height: 50px;
+            background-color: rgb(245, 243, 238);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo{
+            width: 220px;
+            height: 65px;
+            background-image: url(照片/logo2.jpg); 
+            background-size: contain;
+            background-position: center;
+        }
+        .list1 a{
+            color: rgb(35, 24, 21);
+            font-size: 26px;
+            text-decoration: unset;
+        } 
+        .options{
+            width: 40px;
+            height: 40px;
+            background-image: url(素材/FB.jpg);
+            background-size: contain;
+        }
+         /*以下是banner*/
+        main{
+            width: 100%;
+            height: 820px;
+        }
+        .swiper-container {
+          width: 100%;
+          height: 100%;
+        }
+        .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          background: #fff;
+    
+          /* Center slide text vertically */
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          -webkit-justify-content: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          align-items: center;
+        }
+         /*banner結束*/
+        .content1{
+            width: 100%;
+            height: 1250px;
+            background-color:rgb(245, 243, 238);
+        }
+        .pagination1{
+            width: 100%;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .pagination-font{
+            width: 150px;
+            height: 35px;
+            font-size: 36px;
+            position: relative;
+        }
+        .decoration1{
+            width: 200PX;
+            height: 60px;
+            border: 1px solid rgb(236, 218, 194);
+            position: absolute;
+            top: 3px;
+            right: 0px;
+        }
+        .decoration2{
+            width: 200PX;
+            height: 60px;
+            border: 1px solid rgb(236, 218, 194);
+            position: absolute;
+            top: -6px;
+            left: -6px;
+        }
+        .poto_all1{
+            width: 100%;
+            height: 530px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .poto_all2{
+            width: 100%;
+            height: 530px;
+            display: flex;
+            flex-direction:row-reverse;
+            justify-content: center;
+        }
+        .poto1{
+            width: 440px;
+            height: 440px;
+            border-radius: 50%;
+            background-color: rgb(236, 218, 194);
+            background-image:url(照片/LOGO.jpg) ;
+            background-size: 100% ;
+            background-position: center;
+            position: relative;
+        } 
+        .poto2{
+            width: 440px;
+            height: 440px;
+            border-radius: 50%;
+            background-color: rgb(236, 218, 194);
+            background-image: ;
+            position: relative;
+        }   
+        .border1{
+            width: 470px;
+            height: 470px;
+            border-radius: 50%;
+            border:2px solid rgb(236, 218, 194);
+            position: absolute;
+            left: 30PX;
+            top: -30px;
+        }
+        .border2{
+            width: 470px;
+            height: 470px;
+            border-radius: 50%;
+            border:2px solid rgb(236, 218, 194);
+            position: absolute;
+            left: 30PX;
+            top: 30PX;
+        }
+        .border3{
+            width: 470px;
+            height: 470px;
+            border-radius: 50%;
+            border:2px solid rgb(236, 218, 194);
+            position: absolute;
+            left: -30PX;
+            top: 30px;
+        }
+        .border4{
+            width: 470px;
+            height: 470px;
+            border-radius: 50%;
+            border:2px solid rgb(236, 218, 194);
+            position: absolute;
+            left: -30PX;
+            top: -30px;
+        }
+        .text1{
+            width: 700px;
+            height: 525px;
+            display: flex;
+            flex-direction: column;
+            padding: 50px 0px 0px 250px;
+        }
+        .text2{
+            width: 700PX;
+            height: 525px;
+            display: flex;
+            flex-direction: column;
+            padding: 70px 0px 70px 20px;
+        }
+        span{
+            line-height: 26px;
+            font-size: 16px;
+        }
+         /*以下是不只好食MENU*/
+        .content2{
+            width: 100%;
+            height: 1050px;
+            background-color: rgb(40, 41, 43);
+            display: flex;
+            flex-direction: column;
+            background-size: cover;
+        }
+        .pagination-font2{
+            width: 150px;
+            height: 50px;
+            font-size: 36px;
+            color: white;
+            position: relative;
+        }
+        /*這裡開始是頁籤*/
+        .tabe_all{
+            width: 100%;
+            height: 580px;
+            display: flex;
+            justify-content: center;
+            border-radius: 5px;
+        }
+        #tab{
+            width: 735px;
+            height: 735px;
+            background: rgb(225, 198, 167);
+            border-radius: 5px;
+        }
+        #tab>ul{
+            overflow: hidden;
+            margin: 0;
+            padding: 10px 20px 0 20px;
+        }
+        #tab>ul>li{
+            list-style-type: none;
+        }
+        #tab>ul>li>a{
+            text-decoration: none;
+            font-size: 18px;
+            color: rgb(35, 24, 21);
+            float: left;
+            padding: 14px;
+            margin-left: 5px;
+            border-radius: 5px 5px 0px 0px;
+        }
+        #tab>div {
+            clear:both;
+            padding:0 15px;
+            height:0;
+            overflow:hidden;
+            visibility:hidden;
+            -webkit-transition:all .4s ease-in-out;
+            -moz-transition:all .4s ease-in-out;
+            -ms-transition:all .4s ease-in-out;
+            -o-transition:all .4s ease-in-out;
+            transition:all .4s ease-in-out;
+        }
+        /* span:target */
+        #tab-1:target,
+        #tab-2:target,
+        #tab-3:target,
+        #tab-4:target,
+        #tab-5:target,
+        #tab-6:target,
+        #tab-7:target{
+            border: solid 1px red;
+            display: none;
+        }
+        span:target ~ #tab > ul li:first-child a {
+            background:  rgb(225, 198, 167);
+        }
+        span:target ~ #tab > div:first-of-type {
+            visibility:hidden;
+            height:0;
+            padding:0 15px;
+        }
+        span ~ #tab > ul li:first-child a,
+        #tab-1:target ~ #tab > ul li a[href$="#tab-1"],
+        #tab-2:target ~ #tab > ul li a[href$="#tab-2"],
+        #tab-3:target ~ #tab > ul li a[href$="#tab-3"],
+        #tab-4:target ~ #tab > ul li a[href$="#tab-4"],
+        #tab-5:target ~ #tab > ul li a[href$="#tab-5"],
+        #tab-6:target ~ #tab > ul li a[href$="#tab-6"],
+        #tab-7:target ~ #tab > ul li a[href$="#tab-7"] {
+            background: white;
+        }
+        span ~ #tab > div:first-of-type,
+        #tab-1:target ~ #tab > div.tab-content-1,
+        #tab-2:target ~ #tab > div.tab-content-2,
+        #tab-3:target ~ #tab > div.tab-content-3,
+        #tab-4:target ~ #tab > div.tab-content-4,
+        #tab-5:target ~ #tab > div.tab-content-5,
+        #tab-6:target ~ #tab > div.tab-content-6,
+        #tab-7:target ~ #tab > div.tab-content-7{
+            visibility:visible;
+            height: 735px;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            border-radius: 5px;
+        }
+        /*以上為頁簽*/
+        .menu_potho{
+            width: 690px;
+            height: 505px;
+            margin: 20px 8px;
+        }
+        .menu_font{
+            width: 690px;
+            height: 180px;
+            margin: 0px 8px;
+        }
+        /*以上菜單*/
+        
+        /*好食好物*/
+        .content3{
+            width: 100%;
+            height: 1280px;
+            background-color: white;
+        }
+        /*以下開始為不只這些*/
+        .content4{
+            width: 100%;
+            height: 1280px;
+            background-color: rgb(40, 41, 43);
+        }
+        .content4_1{
+            width: 100%;
+            height: 1160px;
+            position: relative;
+        }
+        .legend_all{
+            width: 100%;
+            height: 530px;
+            position: absolute;
+            left: calc(50% - 600px);
+            top: 40px;
+        }
+        .legend{
+            width: 530px;
+            height: 530px;
+            border-radius: 50%;
+            background-color: rgb(236, 218, 194);
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        } 
+        .legend_b1{
+            width: 540px;
+            height: 540px;
+            border-radius: 50%;
+            border:1px solid rgb(236, 218, 184);
+            position: absolute;
+            left: 40PX;
+            top: -40px;
+        }
+        .legend_b2{
+            width: 540px;
+            height: 540px;
+            border-radius: 50%;
+            border:1px solid rgb(236, 218, 184);
+            position: absolute;
+            left: -40PX;
+            top: 40PX;
+        }
+        .legend_b3{
+            width: 540px;
+            height: 540px;
+            border-radius: 50%;
+            border:1px solid rgb(236, 218, 184);
+            position: absolute;
+            left: 40PX;
+            top: 40px;
+        }
+        .legend_b4{
+            width: 540px;
+            height: 540px;
+            border-radius: 50%;
+            border:1px solid rgb(236, 218, 184);
+            position: absolute;
+            left: -40PX;
+            top: -40px;
+        }
+        .boxR{
+            width: 635px;
+            height: 810px;
+            position: absolute;
+            right: 550px;
+            top: calc(100% - 840px);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .boxL{
+            width: 450px;
+            height: 1130px;
+            position: absolute;
+            right: 100px;
+            display: flex;
+            flex-direction: column;
+        }
+        .potoR1{
+            width: 350px;
+            height: 350px;
+            padding: 5px;
+        }
+        .potoR2{
+            width: 580px;
+            height: 350px;
+            padding: 5px;
+            position: relative;
+        }
+        .poto_border2{
+            width: 580px;
+            height: 350px;
+            border: 1px solid rgb(236, 218, 194);
+            position: absolute;
+            left: -10PX;
+            top: 10px;
+        }
+        .potoL3{
+            width: 405px;
+            height: 350px;
+            padding: 5px;
+            position: relative;
+        }
+        .poto_border3{
+            width: 405px;
+            height: 350px;
+            border: 1px solid rgb(236, 218, 194);
+            position: absolute;
+            left: 10PX;
+            top: -10px;
+        }
+        .potoL4{
+            width: 340px;
+            height: 470px;
+            padding: 5px;
+            position: relative;
+        }
+        .poto_border4{
+            width: 340px;
+            height: 470px;
+            border: 1px solid rgb(236, 218, 194);
+            position: absolute;
+            left: 10PX;
+            top: 10px;
+        }
+        footer{
+            width: 100%;
+            height: 425px;
+            background-color:rgb(26, 27, 28);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer_all{
+            width: 1050px;
+            height: 210px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+        .information_left1{
+            width: 344px;
+            height: 125px;
+            color: white;
+            border-color:white;
+            border-bottom-style:solid ;
+            display: flex;
+            flex-direction: column;
+        }
+        .information_left2{
+            width: 380px;
+            height: 85px;
+            color: white;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .information_right{
+            width: 350px;
+            height: 210px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .map{
+            width: 350px;
+            height: 170px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav">
+            <div class="logo"></div>
+            <div class="menu">
+                <div class="list1">
+                    <a href="#a1">關於我們</a>
+                </div>
+                <div class="list1">
+                    <a href="#a2">不只好食</a>
+                </div>
+                <div class="list1">
+                    <a href="#a3">好食好物</a>
+                </div>
+                <div class="list1">
+                    <a href="#a4">不只這些</a>
+                </div>
+                <div class="options">
+                    <a href="https://www.facebook.com/groups/1190239378035833"><img src="素材/FB.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="照片/html用圖/banner1.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="照片/html用圖/banner2.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="照片/html用圖/banner3.jpg" alt=""></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        
+          <!-- Swiper JS -->
+          <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        
+          <!-- Initialize Swiper -->
+          <script>
+            var swiper = new Swiper('.swiper-container', {
+              spaceBetween: 30,
+              centeredSlides: true,
+              autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+              },
+              pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+              },
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+            });
+          </script>
+    </main>
+    <div class="content1" id="a1">
+        <div class="pagination1">
+            <div class="pagination-font">
+                經營理念
+                <div class="decoration1"></div>
+                <div class="decoration2"></div>
+            </div>
+        </div>
+        <div class="poto_all1">
+            <div class="poto1">
+                <div class="border1"></div>
+                <div class="border2"></div>
+                <div class="border3"></div>
+                <div class="border4"></div>
+            </div>
+            <div class="text1">
+                <h2>關於不只好食：</h2>
+                <span>【不只好食】如同店名一樣，不只是吃飯喝咖啡的地方，是任</span>
+                <span>意、是放鬆、是無拘無束、是無受限制的空間。在這裡:</span>
+                <span>你可以自由的放風孩子，放空一下。</span>
+                <span>你可以不受時間干擾，靈感湧現。</span>
+                <span>你可以任意地做你自己，沒有壓力。</span>
+                <span>你可以提升自我，追求更美好的生活。</span>
+                <P></P>
+                <span>不管你是誰，這裏就是你的秘密基地，由你來定義。</span>
+                <P></P>  
+                <span>我們以為自己終身都在追求一種生活，轉身去做另外一個人，</span>
+                <span>卻也不是不可能，在這裡，你不受現實角色的框架，讓你在這</span>
+                <span>平行世界裡有不同人生的能力。</span>
+            </div>
+        </div>
+        <div class="poto_all2">
+            <div class="poto2">
+                <div class="border1"></div>
+                <div class="border2"></div>
+                <div class="border3"></div>
+                <div class="border4"></div>
+            </div>
+            <div class="text2">
+                <h2>關於好食好物社團</h2>
+                <span>二個女孩從單身到進入家庭，生了孩子轉變為媽媽的</span>
+                <span>角色，我們對孩子的食衣育樂上用心挑選、經營餐廳</span>
+                <span>對食材的把關，選擇安心、實在、有品質的好物及好</span>
+                <span>食一同和大家分享。</span>
+                <h2>未來願景</h2>
+                <span>結合網路購物及餐廳，既是取貨據點，也是放鬆聚會</span>
+                <span>快樂生活的好地方。</span>
+            </div>
+        </div>
+    </div>
+    <div class="content2" id="a2">
+        <div class="pagination1">
+            <div class="pagination-font2">不只好食
+                <div class="decoration1"></div>
+                <div class="decoration2"></div>
+            </div>
+        </div>
+        <div class="tabe_all">
+            <span id="tab-1"></span>
+            <span id="tab-2"></span>
+            <span id="tab-3"></span>
+            <span id="tab-4"></span>
+            <span id="tab-5"></span>
+            <span id="tab-6"></span>
+            <span id="tab-7"></span>
+            <div id="tab">
+                <ul>
+                    <li><a href="#tab-1">咖哩蛋包飯</a></li>
+                    <li><a href="#tab-2">炒泡麵</a></li>
+                    <li><a href="#tab-3">拼盤早午餐</a></li>
+                    <li><a href="#tab-4">熱壓吐司</a></li>
+                    <li><a href="#tab-5">點心/湯品</a></li>
+                    <li><a href="#tab-6">咖啡</a></li>
+                    <li><a href="#tab-7">飲料</a></li>
+                </ul>
+                <div class="tab-content-1">
+                    <div class="menu_font">
+                        <h2>咖哩蛋包飯</h2>
+                        <h3>蔬食/唐揚雞/起司漢堡/日式炸豬排</h3>
+                        <span>半熟蛋皮口感鬆軟絕妙，將刀輕插入蛋包飯，粘稠鬆軟的那種細膩Q彈的口感，配上香濃的咖哩及主食，讓人回味無窮。</span> 
+                    </div> 
+                    <div class="menu_potho"><img src="照片/menu/漢堡咖哩蛋包飯.jpg" alt=""></div>
+                </div>
+                <div class="tab-content-2">
+                    <div class="menu_font">
+                        <h2>炒泡麵</h2>
+                        <h3>原味/唐揚雞/日式炸豬排</h3>
+                        <span>民族小吃的炒泡麵不是單純的將麵炒開，而是有加入獨門的特製醬汁，讓麵條吸飽醬汁後再放入配料一起拌炒，香味四溢之餘，味道也著實讓人垂涎。</span>
+                    </div>
+                    <div class="menu_potho"><img src="照片/menu/炒泡麵.jpg" alt=""></div>
+                </div>
+                <div class="tab-content-3">
+                    <div class="menu_font">
+                        <h2>拼盤早午餐</h2>
+                        <h3>香嫩滑蛋/唐揚雞/起司漢堡/日式炸豬排</h3>
+                        <span>愛吃美式餐點的捧油們經典的早午餐拼盤不要錯過了！鬆軟麵包、熱騰騰的薯條、鹹淡洽好的烤蔬菜加上主食營養滿分！</span>
+                    </div>
+                    <div class="menu_potho"><img src="照片/menu/滑蛋早午餐.jpg" alt=""></div> 
+                </div>
+                <div class="tab-content-4">
+                    <div class="menu_font">
+                        <h2>熱壓吐司</h2>
+                        <h3>起司火腿蛋/燻雞起司/香蕉巧克力花生/棉花糖（巧克力/草莓）</h3>
+                        <span>吐司經過熱壓外圍有點焦脆，內夾入了燻雞肉丁、培根等配料，加入起司內香氣交融，現點現做熱壓吐司盒，爆漿口感令人愛不釋手。千變萬化的熱壓吐司，有鹹有甜任君挑選</span>
+                    </div>
+                    <div class="menu_potho"><img src="照片/menu/火腿蛋起司.jpg" alt=""></div>   
+                </div>
+                <div class="tab-content-5">
+                    <div class="menu_font"><h2>點心/湯品</h2>
+                        <h3>點心：波浪脆薯/洋蔥圈/一口咬小雞球</h3>
+                        <h3>湯品：每日濃湯/小肉圓湯</h3>
+                    </div> 
+                    <div class="menu_potho"><img src="照片/menu/炸物.jpg" alt=""></div>  
+                </div>
+                <div class="tab-content-6">
+                    <div class="menu_font">
+                        <h2>咖啡</h2>
+                        <h3>好食美式咖啡/焦糖瑪奇朵/好食拿鐵咖啡</h3>
+                        <h3>風味拿鐵：榛果/海鹽焦糖/桂花/每日特調</h3>
+                    </div>
+                    <div class="menu_potho"><img src="照片/menu/咖啡1.jpg" alt=""></div>
+                </div>
+                <div class="tab-content-7">
+                    <div class="menu_font">
+                        <h2>飲料</h2>
+                        <h3>茶飲：茉香綠茶/蜜香紅茶/鐵觀音/白桃烏龍/莓果果粒茶</h3>
+                        <h3>鮮奶茶：蜜香紅茶拿鐵/鐵觀音拿鐵/白桃烏龍拿鐵/抹茶拿鐵</h3>
+                        <h3>冰沙：/抹茶冰沙/摩卡奇諾冰沙/芒果雪泥冰沙</h3>
+                    </div> 
+                    <div class="menu_potho"><img src="照片/menu/飲料2 .jpg" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content3" id="a3">
+        <div class="pagination1">
+            <div class="pagination-font">
+                <div class="decoration1"></div>
+                <div class="decoration2"></div>
+                好食好物
+            </div>   
+        </div>
+    </div>
+    <div class="content4" id="a4">
+        <div class="pagination1">
+            <div class="pagination-font2">
+                <div class="decoration1"></div>
+                <div class="decoration2"></div>
+                不只這些
+            </div>
+        </div>
+        <div class="content4_1">
+            <div class="legend_all">
+                <div class="legend">
+                    <p>外帶/ Foodpanda</p> 
+                    <p>好食好物商品取貨點</p> 
+                    <p>企業合作提案/商業共享空間</p>      
+                    <p>電影賞析/各類課程/講座</p> 
+                    <p>自助餐會/雞尾酒會</p> 
+                    <p>場地租借</p> 
+                    <div class="legend_b1"></div>
+                    <div class="legend_b2"></div>
+                    <div class="legend_b3"></div>
+                    <div class="legend_b4"></div>
+                </div>
+            </div>
+            <div class="boxR">
+                <div class="potoR1">
+                    <img src="照片/html用圖/示意1(已裁).png" alt="">
+                </div>
+                <div class="potoR2">
+                    <img src="照片/html用圖/示意2(已裁).jpg" alt="">
+                    <div class="poto_border2"></div>
+                </div>
+            </div>
+            <div class="boxL">
+                <div class="potoL3">
+                    <img src="照片/html用圖/示意3(已裁).jpg" alt="">
+                    <div class="poto_border3"></div>
+                </div>
+                <div class="potoL4">
+                    <img src="照片/html用圖/示意4(已裁).jpg" alt="">
+                    <div class="poto_border4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer_all">
+            <div class="information_left1">
+                <span>營業時間：周一至周五AM9:00-PM4:00</span>
+                <span>電話：04 728 4500</span>
+                <span>地址：彰化市中山路三段359號(台化福利大樓內)</span>
+            </div>
+            <div class="information_left2">
+                <span>版權聲明：©2021EmmaYouDesign</span>
+            </div>
+            <div class="information_right">
+                <span>地圖</span>
+                <div class="map"></div>
+            </div>
+        </div>
+    </footer>
+
+
+    
+
+</body>
+</html>
