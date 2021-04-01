@@ -333,20 +333,14 @@
             width: 100%;
             height: 1280px;
             background-color: white;
-            display: flex;
-            flex-direction: column;
         }
         /*好食好物的商品輪播*/
-        #section_4{
-            height: 1130px;
-        }
         .swiper-container{
             width: 100%;
-            height: 800px;
-            padding: 50px 0px;
+            height: 820px;
         }
         .swiper-wrapper{
-            width: 600px;
+            width: 820px;
         }
         .swiper-slide{
             background-repeat: no-repeat;
@@ -361,16 +355,21 @@
             width: 100%;
             height: 1280px;
             background-color: rgb(40, 41, 43);
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap
+            
         }
         .content4_1{
-            width: 100%;
-            height: 1160px;
+            width: 530px;
+            height: 530px;
             position: relative;
         }
         .legend_all{
+            width: 530px;
             height: 530px;
             position: absolute;
-            left: calc(50% - 600px);
+            left: 50%;
             top: 40px;
         }
         .legend{
@@ -423,19 +422,15 @@
         }
         .boxR{
             width: 635px;
-            height: 810px;
-            position: absolute;
-            right: 550px;
-            top: calc(100% - 840px);
+            height: 1000px;
             display: flex;
             flex-direction: column;
             align-items: flex-end;
+            justify-content: flex-end;
         }
         .boxL{
             width: 450px;
             height: 1130px;
-            position: absolute;
-            right: 100px;
             display: flex;
             flex-direction: column;
         }
@@ -712,35 +707,33 @@
                 好食好物
             </div>
         </div>
-        <section id="section_4">
                 <!-- Swiper -->
-            <div class="swiper-container">
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"
-                        style="background-image:url(照片/餐廳/餐廳1.jpg)">
-                    </div>
-                    <div class="swiper-slide"
-                        style="background-image:url(照片/餐廳/餐廳1.jpg)">
-                    </div>
-                    <div class="swiper-slide"
-                        style="background-image:url(照片/餐廳/餐廳1.jpg)">
-                    </div>
-                    <div class="swiper-slide"
-                        style="background-image:url(照片/餐廳/餐廳1.jpg)">
-                    </div>
-                    <div class="swiper-slide"
-                        style="background-image:url(照片/餐廳/餐廳1.jpg)">
-                    </div>
-                    <div class="swiper-slide"
-                        style="background-image:url(照片/餐廳/餐廳1.jpg)">
-                    </div>
+        <div class="swiper-container">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"
+                    style="background-image:url(照片/好食好物/拼圖1.jpg)">
                 </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
+                <div class="swiper-slide"
+                    style="background-image:url(照片/好食好物/拼圖2.jpg)">
+                </div>
+                <div class="swiper-slide"
+                    style="background-image:url(照片/好食好物/水餃.jpg)">
+                </div>
+                <div class="swiper-slide"
+                    style="background-image:url(照片/好食好物/香菇料理.jpeg)">
+                </div>
+                <div class="swiper-slide"
+                    style="background-image:url(照片/好食好物/魚料理2.jpeg)">
+                </div>
+                <div class="swiper-slide"
+                    style="background-image:url(照片/好食好物/蠟筆.jpg)">
+                </div>
             </div>
-        </section>
+                    <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+        </div>
     </div>
     <div class="content4" id="a4">
         <div class="pagination1">
@@ -765,7 +758,8 @@
                     <div class="legend_b4"></div>
                 </div>
             </div>
-            <div class="boxR">
+        </div>
+        <div class="boxR">
                 <div class="potoR1">
                     <img src="照片/html用圖/示意1(已裁).png" alt="">
                 </div>
@@ -773,18 +767,17 @@
                     <img src="照片/html用圖/示意2(已裁).jpg" alt="">
                     <div class="poto_border2"></div>
                 </div>
-            </div>
-            <div class="boxL">
-                <div class="potoL3">
-                    <img src="照片/html用圖/示意3(已裁).jpg" alt="">
-                    <div class="poto_border3"></div>
-                </div>
-                <div class="potoL4">
-                    <img src="照片/html用圖/示意4(已裁).jpg" alt="">
-                    <div class="poto_border4"></div>
-                </div>
-            </div>
         </div>
+        <div class="boxL">
+            <div class="potoL3">
+                <img src="照片/html用圖/示意3(已裁).jpg" alt="">
+                <div class="poto_border3"></div>
+            </div>
+            <div class="potoL4">
+                <img src="照片/html用圖/示意4(已裁).jpg" alt="">
+                <div class="poto_border4"></div>
+            </div>
+        </div>   
     </div>
     <footer>
         <div class="footer_all">
@@ -810,8 +803,8 @@
      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         
      <!-- Initialize Swiper -->
-       <!--第一個Banner的swiper-->
-       <!--第二個Banner的swiper #section_4-->
+       <!--第一個swiper banner-->
+       <!--第二個swiper 好食好物-->
      <script>
        var  swiper = new Swiper('.swiper-container', {
             spaceBetween: 30,
@@ -830,7 +823,7 @@
             },
        });
        
-        var circle1 = new Swiper('#section_4 .swiper-container', {
+        var circle1 = new Swiper('#section_4.swiper-container', {
             slidesPerView: 1,
             effect: 'coverflow',
             loop: true,
@@ -839,11 +832,11 @@
             lazy: true,
             updateOnWindowResize: true,
             coverflowEffect: {
-            rotate: 0,
-            stretch: 205,
-            depth: 750,
-            modifier: 1,
-            slideShadows: false,
+                rotate: 0,
+                stretch: 205,
+                depth: 750,
+                modifier: 1,
+                slideShadows: false,
             },
             breakpoints: {
                 768: {
@@ -859,8 +852,6 @@
                 prevEl: '#section_4 .swiper-button-prev',
             },
         });
-
-
     </script>
   
 </body>
