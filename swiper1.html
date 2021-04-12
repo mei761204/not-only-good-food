@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+
+    <style>
+          
+
+    </style>
+</head>
+<body>
+    <section id ="section_4">
+        
+    
+        <div class="Environment">
+            <div class="container">
+                <div class="row">
+                    <div id="Environment_swiper" class="col-12">
+                                                <img class="title" src="http://www.ksps.km.edu.tw/images/00-indexV3/04-title.svg" alt="環境導覽">
+                                            <!-- Swiper -->
+                        <div class="swiper-container">
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-wrapper">
+                                                                <div class="swiper-slide"
+                                        style="background-image:url(/upload/arounds_img/161059466706409663226af2f3114485aa4e0a23b4.JPG)">
+                                    </div>
+                                                                <div class="swiper-slide"
+                                        style="background-image:url(/upload/arounds_img/16105946350aa1883c6411f7873cb83dacb17b0afc.JPG)">
+                                    </div>
+                                                                <div class="swiper-slide"
+                                        style="background-image:url(/upload/arounds_img/16105945898f85517967795eeef66c225f7883bdcb.jpg)">
+                                    </div>
+                                                                <div class="swiper-slide"
+                                        style="background-image:url(/upload/arounds_img/160663475885d8ce590ad8981ca2c8286f79f59954.jpg)">
+                                    </div>
+                                                                <div class="swiper-slide"
+                                        style="background-image:url(/upload/arounds_img/16066347429766527f2b5d3e95d4a733fcfb77bd7e.jpg)">
+                                    </div>
+                                                                <div class="swiper-slide"
+                                        style="background-image:url(/upload/arounds_img/1606634737006f52e9102a8d3be2fe5614f42ba989.jpg)">
+                                    </div>
+                                                        </div>
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <img class="read" src="http://www.ksps.km.edu.tw/images/00-indexV3/read.svg" alt="">
+        <img class="sing" src="http://www.ksps.km.edu.tw/images/00-indexV3/sing.svg" alt="">
+        <img class="sing_bg" src="http://www.ksps.km.edu.tw/images/00-indexV3/sing_bg.svg" alt="">
+    
+    </section>
+
+    <section id="section_6">
+        <div id="footer_swiper" class="container-fluid">
+            <div class="row">
+                <div class="col-1">
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <div class="container">
+                    <!-- Swiper -->
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                                                        <div class="swiper-slide"><a href="https://168.motc.gov.tw/" target="_blank"><img src="/upload/friendships_img/small-16135290461ff8a7b5dc7a7d1f0ed65aaa29c04b1e.JPG" alt=""></a></div>
+                                                        <div class="swiper-slide"><a href="https://epaper.edu.tw/" target="_blank"><img src="/upload/friendships_img/small-16081263782a79ea27c279e471f4d180b08d62b00a.png" alt=""></a></div>
+                                                        <div class="swiper-slide"><a href="http://www.km.edu.tw/" target="_blank"><img src="/upload/friendships_img/1606637654bf8229696f7a3bb4700cfddef19fa23f.jpg" alt=""></a></div>
+                                                        <div class="swiper-slide"><a href="http://enc.moe.edu.tw/" target="_blank"><img src="/upload/friendships_img/small-1613528650202cb962ac59075b964b07152d234b70.jpg" alt=""></a></div>
+                                                        <div class="swiper-slide"><a href="https://cloud.edu.tw/" target="_blank"><img src="/upload/friendships_img/1606637559a597e50502f5ff68e3e25b9114205d4a.jpg" alt=""></a></div>
+                                                        <div class="swiper-slide"><a href="https://priori.moe.gov.tw/" target="_blank"><img src="/upload/friendships_img/small-1607440178b73ce398c39f506af761d2277d853a92.jpg" alt=""></a></div>
+                                                </div>
+                        <!-- Add Pagination -->
+                    </div>
+                </div>
+                <div class="col-1">
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        var swiper = new Swiper('#section_6 .swiper-container', {
+            slidesPerView: 'auto',
+            spaceBetween: 30,
+            pagination: {
+                el: '#section_6 .swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '#section_6 .swiper-button-next',
+                prevEl: '#section_6 .swiper-button-prev',
+            },
+        });
+        var circle1 = new Swiper('#section_4 .swiper-container', {
+                slidesPerView: 1,
+                effect: 'coverflow',
+                loop: true,
+                grabCursor: true,
+                centeredSlides: true,
+                lazy: true,
+                updateOnWindowResize:true,
+                coverflowEffect: {
+                    rotate: 0,
+                    stretch: 205,
+                    depth: 750,
+                    modifier: 1,
+                    slideShadows: false,
+                },
+                breakpoints: {
+                    768: {
+
+                        slidesPerView: "auto",
+                    }
+                },
+                pagination: {
+                    el: '#section_4 .swiper-pagination',
+                },
+                navigation: {
+                    nextEl: '#section_4 .swiper-button-next',
+                    prevEl: '#section_4 .swiper-button-prev',
+                },
+            });
+
+            $(window).resize(
+                function () {
+                    setTimeout(function(){
+                        circle1.update();
+                        swiper.update();
+                    }, 300);
+
+                }
+            );
+    </script>
+    </body>
+</html>

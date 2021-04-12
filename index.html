@@ -13,6 +13,58 @@
             box-sizing: border-box;
             scroll-behavior: smooth;
         }
+         /*好食好物的商品輪播*/
+        .swiper-container{
+            height: 80%;
+        }
+        .swiper-wrapper{
+            width: 800px;
+        }
+        .swiper-slide{
+            background-repeat: no-repeat;
+            background-size: contain;
+            opacity: 0;
+        }
+
+        .swiper-slide-active,.swiper-slide-next,.swiper-slide-prev{
+            opacity: 1;
+        }
+        .swp2{
+            background-image: url(照片/好食好物/商品2\(已修\).jpg);
+            width: 1300px;
+            height: 1100px;
+            background-size: 65%;
+            background-position: center;
+        }
+        .swp3{
+            background-image: url(照片/好食好物/IMG_4986\(已修\).jpg);
+            width: 1300px;
+            height: 1100px;
+            background-size: 85%;
+            background-position: center;
+        }
+        .swp4{
+            background-image: url(照片/好食好物/商品照1\(已修\).jpg);
+            width: 1300px;
+            height: 1100px;
+            background-size: 65%;
+            background-position: center;
+        }
+        .swp5{
+            background-image: url(照片/好食好物/IMG_5010.JPG);
+            width: 1300px;
+            height: 1100px;
+            background-size: 65%;
+            background-position: center;
+        }
+        .swp6{
+            background-image: url(照片/好食好物/IMG_5014.JPG);
+            width: 1300px;
+            height: 1100px;
+            background-size: 65%;
+            background-position: center;
+        }
+        /*ban頭*/
         img{
             width: 100%;
             height: 100%;
@@ -62,32 +114,28 @@
             background-size: contain;
         }
          /*以下是banner*/
-        main{
-            width: 100%;
-            height: 820px;
-        }
-        .swiper-container ban{
+         .swiper-container1 {
           width: 100%;
           height: 100%;
         }
-        .swiper-slide ban{
-          text-align: center;
-          font-size: 18px;
-          background: #fff;
-    
-          /* Center slide text vertically */
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: -webkit-flex;
-          display: flex;
-          -webkit-box-pack: center;
-          -ms-flex-pack: center;
-          -webkit-justify-content: center;
-          justify-content: center;
-          -webkit-box-align: center;
-          -ms-flex-align: center;
-          -webkit-align-items: center;
-          align-items: center;
+        .ban{
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
         }
          /*banner結束*/
         .content1{
@@ -332,24 +380,9 @@
         .content3{
             width: 100%;
             height: 1280px;
-            background-color: white;
+            background-color:rgb(245, 243, 238);
         }
-        /*好食好物的商品輪播*/
-        .swiper-container{
-            width: 100%;
-            height: 820px;
-        }
-        .swiper-wrapper{
-            width: 820px;
-        }
-        .swiper-slide{
-            background-repeat: no-repeat;
-            background-size: contain;
-            opacity: 0;
-        }
-        .swiper-slide-active,.swiper-slide-next,.swiper-slide-prev{
-            opacity: 1;
-        }
+       
         /*以下開始為不只這些*/
         .content4{
             width: 100%;
@@ -358,7 +391,6 @@
             display: flex;
             flex-direction: row;
             flex-wrap: wrap
-            
         }
         .content4_1{
             width: 530px;
@@ -438,48 +470,53 @@
             width: 350px;
             height: 350px;
             padding: 5px;
+            overflow: hidden;
+        }
+        .potoR1 img{
+            transform: scale(1,1);
+            transition: all 1s ease-out;
+        }
+        .potoR1 img:hover{
+            transform: scale(1.2,1.2);
         }
         .potoR2{
             width: 580px;
             height: 350px;
             padding: 5px;
-            position: relative;
+            overflow: hidden;
         }
-        .poto_border2{
-            width: 580px;
-            height: 350px;
-            border: 1px solid rgb(236, 218, 194);
-            position: absolute;
-            left: -10PX;
-            top: 10px;
+        .potoR2 img{
+            transform: scale(1,1);
+            transition: all 1s ease-out;
+        }
+        .potoR2 img:hover{
+            transform: scale(1.2,1.2);
         }
         .potoL3{
-            width: 405px;
-            height: 350px;
+            width: 400px;
+            height: 400px;
             padding: 5px;
-            position: relative;
+            overflow: hidden;
         }
-        .poto_border3{
-            width: 405px;
-            height: 350px;
-            border: 1px solid rgb(236, 218, 194);
-            position: absolute;
-            left: 10PX;
-            top: -10px;
+        .potoL3 img{
+            transform: scale(1,1);
+            transition: all 1s ease-out;
+        }
+        .potoL3 img:hover{
+            transform: scale(1.2,1.2);
         }
         .potoL4{
-            width: 340px;
-            height: 470px;
+            width: 350px;
+            height: 500px;
             padding: 5px;
-            position: relative;
+            overflow: hidden;
         }
-        .poto_border4{
-            width: 340px;
-            height: 470px;
-            border: 1px solid rgb(236, 218, 194);
-            position: absolute;
-            left: 10PX;
-            top: 10px;
+        .potoL4 img{
+            transform: scale(1,1);
+            transition: all 1s ease-out;
+        }
+        .potoL4 img:hover{
+            transform: scale(1.2,1.2);
         }
         footer{
             width: 100%;
@@ -522,8 +559,8 @@
             justify-content: space-between;
         }
         .map{
-            width: 350px;
-            height: 170px;
+            width: 400px;
+            height: 200px;
             background-color: white;
         }
     </style>
@@ -552,11 +589,13 @@
         </div>
     </nav>
     <main>
-        <div class="swiper-container ban">
+        <div class="swiper-container1">
             <div class="swiper-wrapper">
-              <div class="swiper-slide ban"><img src="照片/html用圖/banner1.jpg" alt=""></div>
+              <div class="swiper-slide ban"><img src="照片/html用圖/banner4.jpg" alt=""></div>
               <div class="swiper-slide ban"><img src="照片/html用圖/banner2.jpg" alt=""></div>
               <div class="swiper-slide ban"><img src="照片/html用圖/banner3.jpg" alt=""></div>
+              <div class="swiper-slide ban"><img src="照片/html用圖/banner6.jpg" alt=""></div>
+              <div class="swiper-slide ban"><img src="照片/html用圖/banner5.jpg" alt=""></div>
             </div>
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
@@ -611,7 +650,7 @@
                 <span>食一同和大家分享。</span>
                 <h2>未來願景</h2>
                 <span>結合網路購物及餐廳，既是取貨據點，也是放鬆聚會</span>
-                <span>快樂生活的好地方。</span>
+                <span>享受生活的好地方。</span>
             </div>
         </div>
     </div>
@@ -707,33 +746,23 @@
                 好食好物
             </div>
         </div>
-                <!-- Swiper -->
-        <div class="swiper-container">
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"
-                    style="background-image:url(照片/好食好物/拼圖1.jpg)">
+        <section id ="section_4">
+             <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide swp2"></div>
+                    <div class="swiper-slide swp3"></div>
+                    <div class="swiper-slide swp4"></div>
+                    <div class="swiper-slide swp5"></div>
+                    <div class="swiper-slide swp6"></div>
+                    <div class="swiper-slide swp7"></div>
                 </div>
-                <div class="swiper-slide"
-                    style="background-image:url(照片/好食好物/拼圖2.jpg)">
-                </div>
-                <div class="swiper-slide"
-                    style="background-image:url(照片/好食好物/水餃.jpg)">
-                </div>
-                <div class="swiper-slide"
-                    style="background-image:url(照片/好食好物/香菇料理.jpeg)">
-                </div>
-                <div class="swiper-slide"
-                    style="background-image:url(照片/好食好物/魚料理2.jpeg)">
-                </div>
-                <div class="swiper-slide"
-                    style="background-image:url(照片/好食好物/蠟筆.jpg)">
-                </div>
-            </div>
-                    <!-- Add Pagination -->
+            <!-- Add Pagination -->
                 <div class="swiper-pagination"></div>
-        </div>
+            </div>
+    </section>
     </div>
     <div class="content4" id="a4">
         <div class="pagination1">
@@ -761,7 +790,7 @@
         </div>
         <div class="boxR">
                 <div class="potoR1">
-                    <img src="照片/html用圖/示意1(已裁).png" alt="">
+                    <img src="照片/html用圖/示意5(已裁).jpg" alt="">
                 </div>
                 <div class="potoR2">
                     <img src="照片/html用圖/示意2(已裁).jpg" alt="">
@@ -770,7 +799,7 @@
         </div>
         <div class="boxL">
             <div class="potoL3">
-                <img src="照片/html用圖/示意3(已裁).jpg" alt="">
+                <img src="/照片/html用圖/示意3(已裁).jpg" alt="">
                 <div class="poto_border3"></div>
             </div>
             <div class="potoL4">
@@ -791,7 +820,7 @@
             </div>
             <div class="information_right">
                 <span>地圖</span>
-                <div class="map"></div>
+                <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1082.894148240239!2d120.56221596391723!3d24.087170523077912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346938c34215f5bf%3A0x2be99cc74e1be2!2z5LiN5Y-q5aW96aOf!5e0!3m2!1szh-TW!2stw!4v1617686312968!5m2!1szh-TW!2stw" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
             </div>
         </div>
     </footer>
@@ -804,33 +833,32 @@
         
      <!-- Initialize Swiper -->
        <!--第一個swiper banner-->
-       <!--第二個swiper 好食好物-->
      <script>
-       var  swiper = new Swiper('.swiper-container', {
-            spaceBetween: 30,
-            centeredSlides: true,
-            autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-            },
-            pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-            },
-            navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-            },
-       });
-       
-        var circle1 = new Swiper('#section_4.swiper-container', {
+       var swiper = new Swiper('.swiper-container1', {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+        var circle1 = new Swiper('#section_4 .swiper-container', {
             slidesPerView: 1,
             effect: 'coverflow',
             loop: true,
             grabCursor: true,
             centeredSlides: true,
             lazy: true,
-            updateOnWindowResize: true,
+            updateOnWindowResize:true,
             coverflowEffect: {
                 rotate: 0,
                 stretch: 205,
@@ -852,6 +880,19 @@
                 prevEl: '#section_4 .swiper-button-prev',
             },
         });
+
+        $(window).resize(
+            function () {
+                setTimeout(function(){
+                    circle1.update();
+                    swiper.update();
+                }, 300);
+
+            }
+        );
+    
+
+       
     </script>
   
 </body>

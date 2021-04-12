@@ -15,9 +15,18 @@
         .swiper-container{
             height: 100%;
         }
-
+        .swiper-wrapper{
+            width: 800px;
+        }
         .swiper-slide{
-            background-repeat: no-repeat;    
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-color: aquamarine;
+            opacity: 0;
+        }
+
+        .swiper-slide-active,.swiper-slide-next,.swiper-slide-prev{
+            opacity: 1;
         }
     </style>
 </head>
