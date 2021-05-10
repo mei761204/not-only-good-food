@@ -1,0 +1,2827 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>不知好食</title>
+    <!-- 自己的css -->
+    <link rel="stylesheet" href="css/index.css">
+    <!-- swiper的css -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <!-- animate的Css -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- swiper的js -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- wow Js -->
+    <script src="js/wow.min.js"></script>
+    <!-- 自己的js -->
+    <script src="js/index.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            -webkit-text-size-adjust: none;
+            scroll-behavior: smooth;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            padding-top: 80px;
+            border: 0;
+            outline: 0;
+            font-size: 100%;
+            vertical-align: baseline;
+            background: transparent;
+        }
+
+        #flag1 {
+            position: relative;
+            top: -79px;
+        }
+
+        #flag2 {
+            position: relative;
+            top: -345px;
+        }
+
+        #flag3 {
+            position: relative;
+            top: -110px;
+        }
+
+        #flag4 {
+            position: relative;
+            top: -79px;
+        }
+
+        #flag5 {
+            position: relative;
+            top: -80px;
+        }
+
+        /* 以下是nav */
+        .nav {
+            width: 100%;
+            background-color: white;
+            display: flex;
+            justify-content: space-around;
+            position: fixed;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav_logo {
+            width: 150px;
+            height: 50px;
+            margin-top: 19.5px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url(素材/logo.png);
+        }
+
+        .logo {
+            width: 245px;
+            height: 75px;
+        }
+
+        .menu_cleafix {
+            padding: 0px;
+            display: flex;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .dropDown {
+            position: relative;
+            list-style: none;
+            margin-left: 50px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .hover {
+            display: none;
+            transition: 1s;
+        }
+
+        .deep:hover .hover {
+            display: block;
+            transition: 1s;
+        }
+
+        .hover_02 {
+            display: flex;
+            flex-direction: column;
+            width: 115px;
+            height: 100px;
+            background-color: white;
+            position: absolute;
+            padding-left: 20px;
+            z-index: 2;
+            transition: 1s;
+        }
+
+        .FB {
+            margin-top: 15px;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: wheat;
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
+
+        .sidenav a {
+            text-decoration: none;
+            font-size: 25px;
+            color: black;
+            display: flex;
+            justify-content: center;
+            transition: 0.3s;
+            margin-bottom: 5px;
+            white-space: nowrap;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            top: 0;
+            left: 0%;
+            font-size: 36px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+
+        .dropdown {
+            top: 0;
+            right: 0;
+            width: 100%;
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 100%;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+
+        .strip {
+            font-size: 40px;
+            cursor: pointer;
+            position: absolute;
+            right: 25px;
+            top: 15px;
+            bottom: 15px;
+            display: none;
+        }
+
+        /* 以上是nav */
+
+        /* 以下是ban */
+        .ban {
+            width: 100%;
+            display: flex;
+            position: relative;
+        }
+
+        #flag0 {
+            position: relative;
+            top: -80px;
+        }
+
+        .ban_img {
+            max-width: 100%;
+            /*不使用width:100% 是因避免圖片解析度不好，隨父元素被放大時會糊掉*/
+            height: auto;
+        }
+
+        /* 以上是ban */
+
+        /* 以下是content*/
+        #we {
+            width: 100%;
+            height: 700px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+        }
+
+        .meet {
+            width: 1180px;
+            height: 615px;
+            top: 50px;
+            position: relative;
+            display: flex;
+            padding: 0px;
+        }
+
+        /* 以上是兩個大框 */
+
+        /* 以下關於不只好食 */
+        .on {
+            width: 80px;
+            height: 250px;
+            position: absolute;
+            top: 75px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .sign {
+            width: 35px;
+            height: 155px;
+            background-image: url(素材/好食標籤.png);
+            position: relative;
+            writing-mode: vertical-lr;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .on_title {
+            width: 30px;
+            height: 245px;
+            margin-top: -2px;
+        }
+
+        .title_text_meal {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-left: -5px;
+            background-image: url(素材/食-Logo.png);
+            margin-top: -5px;
+        }
+
+        .food_logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .title_text {
+            margin-left: 2.5px;
+            font-size: 34px;
+            line-height: 36px;
+
+        }
+
+        .title_text_03 {
+            margin-left: 2.5px;
+            font-size: 34px;
+            line-height: 34px;
+            margin-top: 3px;
+        }
+
+        /* 以上是關於不只好食 */
+
+        /* 以下是相遇．緣分文字 */
+        .occur {
+            width: 451px;
+            height: 430px;
+            position: absolute;
+            left: 135px;
+            top: 66px;
+        }
+
+        .occur_title {
+            margin-top: -2px;
+            margin-bottom: 25px;
+            font-size: 50px;
+            font-weight: 400;
+        }
+
+        .base {
+            margin-left: 10px;
+            font-size: 18px;
+        }
+
+        /* 以上是相遇．緣分文字 */
+        .ball {
+            width: 535px;
+            height: 535px;
+            position: absolute;
+            right: 0%;
+        }
+
+        .about_img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-image: url(素材/首頁素材.png);
+            background-size: cover;
+            position: absolute;
+            right: 0%;
+            margin-top: 45px;
+        }
+
+        /* 這個是動畫指令 */
+        .border {
+            animation-name: moving;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        .border1 {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 2px solid rgb(236, 218, 194);
+            position: absolute;
+            left: 20px;
+            top: -50px
+        }
+
+        .border2 {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 2px solid rgb(236, 218, 194);
+            position: absolute;
+            left: 5PX;
+            top: 45PX;
+        }
+
+        .border3 {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 2px solid rgb(236, 218, 194);
+            position: absolute;
+            left: -40PX;
+            top: 10px;
+        }
+
+        @keyframes moving {
+            from {
+                transform: translateY(5px)
+            }
+
+            to {
+                transform: translateY(-5px)
+            }
+        }
+
+        /* 以上是會動圖片 */
+
+        /* 以下是好食swiper */
+        button {
+            border: 0
+        }
+
+        #food {
+            width: 100%;
+            height: 710px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .food_frame {
+            width: 1185px;
+            height: 570px;
+            display: flex;
+            align-items: center;
+        }
+
+        .swiper-father {
+            width: 330px;
+            height: 500px;
+            position: relative;
+        }
+
+        .swiper-pagination-bullet {
+            margin-left: 5px;
+        }
+
+        .small_pagination {
+            position: absolute;
+            top: 97%;
+            left: 33%;
+        }
+
+        /* 以下是更改swiper 物件 */
+        .small_button01 {
+            /*右鍵*/
+            right: -10%;
+            top: 56%;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-image: url(素材/swiper\ 右邊按鈕.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            outline: none
+        }
+
+        .small_button02 {
+            /*左鍵*/
+            position: absolute;
+            left: -10%;
+            top: 56%;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-image: url(素材/swiper\ 左邊按鈕.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            outline: none
+        }
+
+        .swiper-button-prev:after,
+        .swiper-container-rtl .swiper-button-next:after {
+            content: '';
+        }
+
+        .swiper-button-next:after,
+        .swiper-container-rtl .swiper-button-prev:after {
+            content: '';
+        }
+
+        .swiper-pagination-clickable .swiper-pagination-bullet {
+            outline: none;
+        }
+
+        :root {
+            --swiper-theme-color: #777
+        }
+
+        /* 以上是更改swiper 物件 */
+        .SwiperA {
+            width: 310px;
+            height: 400px;
+            margin-top: 22px;
+        }
+
+        .SwiperB {
+            width: 765px;
+        }
+
+        .paper {
+            width: 100%;
+            height: 100%;
+            background-image: url(素材/紙張材質.png);
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+        }
+
+        .menu_box {
+            width: 200px;
+            height: 290px;
+            margin-top: 30px;
+        }
+
+        .dishes {
+            font-size: 18px;
+            border: solid 1px;
+            position: absolute;
+        }
+
+        .menu {
+            margin-top: 35px;
+        }
+
+        .menu_txt {
+            font-size: 18px;
+            letter-spacing: 2px
+        }
+
+        .eating {
+            position: relative;
+            z-index: 1;
+            flex-shrink: 0;
+            width: 100%;
+            max-width: 765px;
+            transform: translateX(-20px);
+        }
+
+        .eating::after {
+            content: "";
+            position: absolute;
+            left: 5px;
+            top: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background-image: url(/素材/maskBg.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .food_title {
+            font-size: 55px;
+            margin-left: 4px;
+        }
+
+        .eating_img {
+            background-repeat: no-repeat;
+            background-size: contain;
+            -webkit-mask-image: url(素材/mask.png);
+            mask-image: url(素材/mask.png);
+            -webkit-mask-size: cover;
+            mask-size: contain;
+            max-width: 745px;
+        }
+
+        .label {
+            width: 85px;
+            height: 155px;
+            margin-bottom: 415px;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 262px;
+            margin-left: 44px;
+        }
+
+        /* 以上是好食swiper */
+
+        /* 以下是好食標籤 */
+        .food_label {
+            width: 35px;
+            height: 155px;
+            background-image: url(素材/好食標籤.png);
+            writing-mode: vertical-lr;
+            display: flex;
+            align-items: center;
+            padding-top: 25px;
+            font-size: 17px;
+            color: white;
+            position: relative;
+        }
+
+        .good_food {
+            writing-mode: vertical-rl;
+
+            font-size: 25px;
+        }
+
+        .good_frame {
+            width: 35px;
+            height: 60px;
+            border-style: solid;
+            border-width: 1px;
+            position: absolute;
+            right: -3px;
+        }
+
+        /* 以下是好物圖片 */
+        #article {
+            width: 100%;
+            height: 820px;
+            display: flex;
+            position: relative;
+        }
+
+        .article_left {
+            width: 50%;
+            height: 765px;
+            position: absolute;
+            bottom: 0%;
+        }
+
+        .article_right {
+            width: 50%;
+            height: 765px;
+            position: absolute;
+            right: 0%;
+            top: -30px;
+        }
+
+        .article_left_top {
+            width: 100%;
+            height: 382.5px;
+            background-color: rgba(244, 211, 120);
+
+        }
+
+        .article_left_under {
+            width: 100%;
+            height: 382.5px;
+            background-color: rgba(244, 211, 120);
+        }
+
+        .article_right_top {
+            width: 100%;
+            height: 382.5px;
+            background-color: rgba(244, 211, 120);
+        }
+
+        .article_right_under {
+            width: 100%;
+            height: 382.5px;
+            background-color: rgba(244, 211, 120);
+        }
+
+        .article_title {
+            display: flex;
+            list-style: none;
+            position: absolute;
+            font-weight: 500;
+            justify-content: center;
+            align-items: center;
+            writing-mode: vertical-rl;
+            font-size: 47px;
+            left: calc(50% - 34.95px);
+            top: 250px;
+
+        }
+
+        .regale {
+            color: white;
+        }
+
+        .good {
+            text-align: justify;
+            font-size: 36px;
+            color: white;
+            font-weight: 200;
+        }
+
+        .box {
+            width: 40px;
+            height: 80px;
+            border-style: double;
+            position: absolute;
+            bottom: -5px;
+            right: 10px;
+            color: white;
+        }
+
+        /* 以上好物圖片 */
+
+        /* 以下是好物遮色片 */
+        .first {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .first_img {
+            width: 574px;
+            background-image: url(素材/育兒.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .second_img {
+            width: 573px;
+            background-image: url(素材/好書.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .third_img {
+            width: 574px;
+            background-image: url(素材/好食.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .fourth_img {
+            width: 574px;
+            background-image: url(素材/家具.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .mask {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            width: 574px;
+            height: 382.5px;
+            background: rgba(244, 211, 120, 0.85);
+            color: #ffffff;
+            opacity: 0;
+            transition: all .8s
+        }
+
+        @media (max-width: 1177px) {
+            .first_img {
+                width: 445px;
+                background-image: url(素材/育兒02.jpg);
+            }
+
+            .second_img {
+                width: 445px;
+                background-image: url(素材/好書02.jpg);
+            }
+
+            .third_img {
+                width: 445px;
+                background-image: url(素材/好食04.jpg);
+            }
+
+            .fourth_img {
+                width: 445px;
+                background-image: url(素材/家具02.jpg);
+            }
+
+            .mask {
+                width: 445px;
+            }
+        }
+
+ 
+
+        .mask_title {
+            font-size: 30px;
+            background: rgb(254 102 13 / 79%);
+        }
+
+        .mask_text {
+            color: rgb(47 47 47);
+        }
+
+        .first:hover .mask {
+            opacity: 1;
+        }
+
+        .second {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .second:hover .mask {
+            opacity: 1;
+        }
+
+        .third {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .third:hover .mask {
+            opacity: 1;
+        }
+
+        .fourth {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .fourth:hover .mask {
+            opacity: 1;
+        }
+
+        /* 以上是好物 */
+
+        /* 以下是好空間 */
+        #space {
+            width: 100%;
+            height: 770px;
+            background-color: white;
+            position: relative;
+
+        }
+
+        .cherish {
+            position: absolute;
+            left: calc(50% - 210px);
+            top: 185px;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            font-size: 55px;
+        }
+
+        .cherish01 {
+            border-style: solid;
+            border-width: 1px;
+            font-size: 30px;
+            margin-top: 16px;
+        }
+
+        .space_img {
+            width: 1085px;
+            height: 195px;
+            position: absolute;
+            left: calc(50% - 542.5px);
+            top: 310px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .frame {
+            width: 155px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .frame_img {
+            width: 155px;
+            height: 155px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .spin {
+            width: 175px;
+            height: 175px;
+            border-radius: 50%;
+            border-style: dashed;
+            border-width: 2px;
+            position: absolute;
+            animation: move 10s linear infinite;
+            display: none;
+            color: white;
+        }
+
+        .frame_img:hover .spin {
+            display: block;
+        }
+
+        @keyframes move {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .frame_text {
+            position: absolute;
+            bottom: 0%;
+            font-size: 20px;
+        }
+
+        /* 以下是好空間swiper */
+        .SwiperC {
+            width: 850px;
+            height: 200px;
+            position: absolute;
+            left: calc(50% - 425px);
+            top: 300px;
+            display: none;
+        }
+
+        .swiper-slide {
+            width: auto;
+        }
+
+        .icon {
+            width: 155px;
+            height: 180px;
+            position: relative;
+        }
+
+        .icon_img {
+            width: 145px;
+            margin-top: 7px;
+            margin-left: 5px;
+        }
+
+        .icon_spin {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border-style: dashed;
+            border-width: 3px;
+            position: absolute;
+            top: 0px;
+            left: -2px;
+            color: white;
+            display: none;
+            animation: move 10s linear infinite;
+        }
+
+        .icon:hover .icon_spin {
+            display: block;
+        }
+
+        @keyframes move {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .icon_text {
+            width: 160px;
+            display: flex;
+            justify-content: center;
+            margin-top: 5px;
+            position: absolute;
+            bottom: 0%;
+        }
+
+        @media (max-width: 1145px) {
+            .SwiperC {
+                width: 850px;
+                height: 200px;
+                left: calc(50% - 425px);
+                display: list-item;
+            }
+
+            .space_img {
+                display: none;
+            }
+        }
+
+        @media (max-width: 660px) {
+            .SwiperC {
+                width: 500px;
+                height: 200px;
+                left: calc(50% - 250px);
+            }
+        }
+
+        @media (max-width: 450px) {
+            .SwiperC {
+                width: 340px;
+                height: 200px;
+                left: calc(50% - 170px);
+            }
+        }
+
+        /* 以上是好空間*/
+        #thorough {
+            width: 100%;
+            height: 770px;
+            background-color: white;
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .thooughr_Text {
+            width: 410px;
+            height: 390px;
+            margin-top: 80px;
+            margin-left: 130px;
+        }
+
+        .thooughr_title {
+            list-style: none;
+            font-size: 55px;
+            white-space: nowrap;
+        }
+
+        .grasp {
+            position: absolute;
+            list-style: none;
+            font-size: 34px;
+            margin-left: 5px;
+            border-style: solid;
+            border-width: 1px;
+        }
+
+        .news01 {
+            list-style: none;
+            margin-top: 120px;
+            font-size: 20px;
+        }
+
+        .news {
+            list-style: none;
+            margin-top: 40px;
+            font-size: 20px;
+        }
+
+        .thorough_img {
+            width: 450px;
+            height: 385px;
+            margin-top: 150px;
+            margin-right: 130px;
+        }
+
+        .footer {
+            width: 100%;
+            height: 315px;
+            background-color: rgb(247, 210, 107);
+            display: flex;
+            justify-content: center;
+            z-index: 2;
+        }
+
+        .footer_img {
+            width: 245px;
+            height: 85px;
+            background-image: url(素材/logo.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-top: 55px;
+        }
+
+        /* 以下是物景 */
+        .house {
+            position: absolute;
+            bottom: 0%;
+            right: 0%;
+            visibility: visible;
+
+        }
+
+        .rabbit {
+            position: absolute;
+            bottom: -5%;
+            left: 10%;
+            visibility: visible;
+        }
+
+        .aircraft {
+            width: 1000px;
+            position: absolute;
+            top: -25%;
+            left: 10%;
+            visibility: visible;
+        }
+
+        /* 以上是物景 */
+
+        /* 以下是footer */
+        .footer_text {
+            text-align: center;
+            position: absolute;
+            margin-top: 150px;
+            font-weight: 500;
+            font-size: 18px;
+        }
+
+        .declare {
+            list-style: none;
+            margin-bottom: 5px;
+            font-size: 20px;
+        }
+
+        /* 以上是footer */
+
+        /* 以下是電腦版改版 */
+        /* 以下是電腦改版相遇 */
+        @media (max-width: 1145px) {
+
+            /* 以下關於不只好食 */
+            #we {
+                height: 500px;
+            }
+
+            .meet {
+                width: 900px;
+                height: 500px;
+                top: 0px;
+            }
+
+            .sign {
+                width: 35px;
+                height: 155px;
+                background-image: url(素材/好食標籤.png);
+                position: relative;
+                writing-mode: vertical-lr;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                display: none;
+            }
+
+            .aircraft {
+                width: 860px;
+                top: -22%;
+                left: 0%;
+            }
+
+            /* 以上是電腦改版關於 */
+
+            /* 以下是電腦好食改版 */
+            .occur {
+                width: 451px;
+                height: 430px;
+                position: absolute;
+                left: 80px;
+                top: 66px;
+            }
+
+            .occur_title {
+                margin-top: -2px;
+                margin-bottom: 25px;
+                font-size: 40px;
+                font-weight: 400;
+            }
+
+            .base {
+                font-size: 16px;
+            }
+
+            .ball {
+                width: 380px;
+                height: 380px;
+            }
+
+            .about_img {
+                margin-top: 100px;
+            }
+
+            /* 以下是好食swiper */
+            .food_frame {
+                margin-right: 150px;
+            }
+
+            .swiper-father {
+                margin-right: 110px;
+            }
+
+            /* 以下是更改swiper 物件 */
+            .small_button01 {
+                /*右鍵*/
+                right: -5%;
+                width: 50px;
+                height: 50px;
+            }
+
+            .small_button02 {
+                /*左鍵*/
+                position: absolute;
+                width: 50px;
+                height: 50px;
+            }
+
+            /* 以上是更改swiper 物件 */
+            .SwiperA {
+                margin-right: 50px;
+            }
+
+            .eating {
+                transform: translateX(30px);
+                margin-left: 150px;
+            }
+
+            .food_title {
+                font-size: 55px;
+                margin-left: 4px;
+            }
+
+            .eating_img {
+                max-width: 555px;
+            }
+
+            .label {
+                display: none;
+            }
+
+            /* 以上是好食swiper */
+        }
+
+        /* 以上是電腦版改版完 */
+
+        /* 以下是平板版 */
+        @media (max-width: 910px) {
+
+            body {
+                padding-top: 57px;
+            }
+
+            #flag1 {
+                position: relative;
+                top: -49px;
+            }
+
+            #flag2 {
+                position: relative;
+                top: -250px;
+            }
+
+            #flag3 {
+                position: relative;
+                top: -50px;
+            }
+
+            #flag4 {
+                position: relative;
+                top: -49px;
+            }
+
+            #flag5 {
+                position: relative;
+                top: -50px;
+            }
+
+            /* 以下是nav */
+            .nav_logo {
+                width: 97px;
+                height: 33px;
+                position: relative;
+                top: 15px;
+                margin-top: 0px;
+            }
+
+            .logo {
+                width: 97px;
+                height: 33px;
+            }
+
+            .menu_cleafix {
+                margin-top: 24px;
+            }
+
+            .dropDown {
+                margin-left: 20px;
+                font-size: 12px;
+                font-weight: 600;
+            }
+
+            .hover {
+                display: none;
+                transition: 1s;
+            }
+
+            .hover_02 {
+                width: 100px;
+                height: 90px;
+            }
+
+            /* 以上是nav */
+
+            /* 以下是關於 */
+            /* 以下關於不只好食 */
+            #we {
+                width: 100%;
+                height: 425px;
+            }
+
+            .meet {
+                width: 600px;
+                height: 330px;
+                margin-top: 50px;
+            }
+
+            /* 以上是兩個大框 */
+
+
+            .on {
+                width: 25px;
+                height: 190px;
+                position: absolute;
+                top: 0px;
+            }
+
+            .on_title {
+                width: 25px;
+                height: 190px;
+            }
+
+            .title_text_meal {
+                border-radius: 50%;
+                margin-left: 0px;
+                background-image: url(素材/食-Logo.png);
+                margin-top: -1px;
+            }
+
+            .food_logo {
+                width: 40px;
+                height: 40px;
+            }
+
+            .title_text {
+                margin-left: 4.5px;
+                font-size: 30px;
+                line-height: 36px;
+            }
+
+            .title_text_03 {
+                margin-left: 4.5px;
+                font-size: 30px;
+                line-height: 30px;
+                margin-top: -3px;
+            }
+
+            /* 以上是關於不只好食 */
+
+            /* 以下是相遇．緣分文字 */
+            .occur {
+                width: 280px;
+                height: 300px;
+                left: 75px;
+                top: 0px;
+            }
+
+            .occur_title {
+                margin-top: 30px;
+                margin-bottom: 40px;
+                font-size: 30px;
+            }
+
+            .base {
+                margin-left: 0px;
+                font-size: 12px;
+            }
+
+            /* 以上是相遇．緣分文字 */
+            .ball {
+                width: 223px;
+                height: 223px;
+            }
+
+            .about_img {
+                margin-top: 100px;
+            }
+
+            .border1 {
+                left: 10px;
+                top: -30px;
+            }
+
+            .border2 {
+                left: 5PX;
+                top: 45PX;
+            }
+
+            .border3 {
+                left: -25PX;
+                top: 10px;
+            }
+
+            /* 以上關於結束 */
+
+            /* 以下是好食 */
+            button {
+                border: 0
+            }
+
+            #food {
+                width: 100%;
+                height: 500px;
+                padding-top: 80px;
+            }
+
+            .food_frame {
+                width: 615px;
+                height: 305px;
+                margin-right: 0px;
+            }
+
+
+            .swiper-father {
+                width: 290px;
+                height: 240px;
+                top: -45px;
+                margin-right: 0px;
+            }
+
+            .small_pagination {
+                top: 140%;
+                left: 33%;
+            }
+
+            /* 以下是更改swiper 物件 */
+            .small_button01 {
+                /*右鍵*/
+                right: -9%;
+                top: 80%;
+                width: 35px;
+                height: 35px;
+            }
+
+            .small_button02 {
+                /*左鍵*/
+                left: 1%;
+                top: 80%;
+                width: 35px;
+                height: 35px;
+            }
+
+            /* 以上是更改swiper 物件 */
+            .SwiperA {
+                width: 250px;
+                height: 290px;
+                margin-top: -5px;
+                margin-right: 0px;
+            }
+
+            .SwiperB {
+                width: 350px;
+            }
+
+            .menu_box {
+                padding: 0px 10px;
+            }
+
+            .menu {
+                font-size: 16px;
+            }
+
+            .menu_txt {
+                font-size: 12px;
+                letter-spacing: 3px
+            }
+
+            .eating {
+                max-width: 340px;
+                transform: translateX(-10px);
+                margin-left: 0px;
+            }
+
+            .eating::after {
+                content: "";
+                position: absolute;
+                left: 5px;
+                top: 0;
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+                background-image: url(/素材/maskBg.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+
+            .food_title {
+                font-size: 30px;
+                margin-left: -90%;
+                position: relative;
+                top: -25px;
+            }
+
+            .eating_img {
+                background-repeat: no-repeat;
+                background-size: contain;
+                -webkit-mask-image: url(素材/mask.png);
+                mask-image: url(素材/mask.png);
+                -webkit-mask-size: cover;
+                mask-size: contain;
+                max-width: 340px;
+            }
+
+
+
+            .label {
+                width: 85px;
+                height: 155px;
+                margin-bottom: 415px;
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+                margin-top: 262px;
+                margin-left: 44px;
+                display: none;
+            }
+
+            /* 以上是好食swiper */
+
+            /* 以上是好食 */
+
+            /* 以下是好物 */
+            #article {
+                width: 100%;
+                height: 475px;
+            }
+
+            .article_left {
+                height: 300px;
+                bottom: 70px;
+            }
+
+            .article_right {
+                height: 300px;
+                top: 55px;
+            }
+
+            .article_left_top {
+                height: 150px;
+            }
+
+            .article_left_under {
+                height: 150px;
+            }
+
+            .article_right_top {
+                height: 150px;
+            }
+
+            .article_right_under {
+                height: 150px;
+            }
+
+            .article_title {
+                font-size: 30px;
+                left: calc(50% - 22.5px);
+                top: calc(50% - 120px);
+            }
+
+            .good {
+                font-size: 24px;
+                color: white;
+                font-weight: 150;
+            }
+
+            .box {
+                height: 70px;
+                right: -2px;
+                display: none;
+            }
+
+            .first_img {
+                width: 225px;
+                background-size: contain;
+                background-image: url(素材/育兒.jpg);
+            }
+
+            .second_img {
+                width: 225px;
+                background-size: contain;
+                background-image: url(素材/好書.jpg);
+            }
+
+            .third_img {
+                width: 225px;
+                background-size: contain;
+                background-image: url(素材/好食.jpg);
+            }
+
+            .fourth_img {
+                width: 225px;
+                background-size: contain;
+                background-image: url(素材/家具.jpg);
+            }
+
+            /* 以上好物圖片 */
+
+            /* 以下是好物遮色片 */
+            .mask {
+                position: absolute;
+                width: 225px;
+                height: 150px;
+            }
+
+            .mask_title {
+                font-size: 20px;
+            }
+
+            .mask_text {
+                font-size: 12px;
+            }
+
+            /* 以上是好物 */
+
+            /* 以下是好空間 */
+            #space {
+                height: 510px;
+            }
+
+            .cherish {
+                left: calc(50% - 150px);
+                top: 50px;
+                font-size: 40px;
+            }
+
+            .cherish01 {
+                font-size: 20px;
+                margin-top: 5px;
+            }
+
+            .space_img {
+                width: 500px;
+                height: 180px;
+                position: absolute;
+                left: calc(50% - 250px);
+                top: 120px;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .frame {
+                height: 180px;
+            }
+
+            .material {
+                width: 140px;
+                height: 140px;
+            }
+
+            .from {
+                position: absolute;
+                top: 180px;
+                left: 85px;
+            }
+
+            .proposal {
+                position: absolute;
+                top: 180px;
+                left: 270px;
+            }
+
+            .SwiperC {
+                display: none;
+            }
+
+            .spin {
+                width: 157px;
+                height: 157px;
+            }
+
+            /* 以上是好空間 */
+
+            /* 以下是深入了解 */
+            #thorough {
+                width: 100%;
+                height: 400px;
+                justify-content: center;
+            }
+
+            .thooughr_Text {
+                width: 550px;
+                height: 330px;
+                margin-top: 40px;
+                margin-left: 75px;
+            }
+
+            .thooughr_title {
+                font-size: 30px;
+            }
+
+            .grasp {
+                font-size: 15px;
+                margin-left: 160px;
+                margin-top: -26px;
+            }
+
+            .news01 {
+                margin-top: 20px;
+                font-size: 14px;
+            }
+
+            .news {
+                margin-top: 10px;
+                font-size: 14px;
+            }
+
+            .thorough_img {
+                width: 310px;
+                height: 265px;
+                margin-top: 100px;
+                margin-right: 75px;
+            }
+
+            .map {
+                width: 310px;
+                height: 265px;
+            }
+
+            /* 以下是物景 */
+            .house {
+                position: absolute;
+                bottom: 0%;
+                right: 0%;
+                visibility: visible;
+
+                display: none;
+
+            }
+
+            .rabbit {
+                position: absolute;
+                bottom: -5%;
+                left: 10%;
+                visibility: visible;
+
+                display: none;
+            }
+
+            .aircraft {
+                width: 1000px;
+                position: absolute;
+                top: -25%;
+                left: 10%;
+                visibility: visible;
+                display: none;
+            }
+
+            /* 以上深入了解 */
+            /* 以下是footer */
+            .footer {
+                width: 100%;
+                height: 225px;
+                background-color: rgb(247, 210, 107);
+            }
+
+            .footer_img {
+                width: 200px;
+                height: 100px;
+                margin-top: 35px;
+            }
+
+            .footer_text {
+                margin-top: 105px;
+                font-weight: 150;
+                font-size: 0px;
+            }
+
+            .declare {
+                margin-bottom: 5px;
+                font-size: 14px;
+            }
+
+            /* 以上是footer */
+        }
+
+        /* 以上是平板版 */
+
+        /* 以下是手機板 */
+        @media (max-width: 670px) {
+            body {
+                padding-top: 50px;
+            }
+
+            #flag1 {
+                position: relative;
+                top: -49px;
+            }
+
+            #flag2 {
+                position: relative;
+                top: -360px;
+            }
+
+            #flag3 {
+                position: relative;
+                top: -40px;
+            }
+
+            #flag4 {
+                position: relative;
+                top: -49px;
+            }
+
+            #flag5 {
+                position: relative;
+                top: -350px;
+            }
+
+            /* 以下是nav */
+            .nav {
+                height: 50px;
+                align-items: center;
+            }
+
+            .nav_logo {
+                width: 100px;
+                height: 35px;
+                top: 0px;
+            }
+
+            .logo {
+                width: 100px;
+                height: 35px;
+            }
+
+            .menu_cleafix {
+                display: none;
+            }
+
+            .deep:hover .hover {
+                display: block;
+                transition: 1s;
+            }
+
+            .strip {
+                font-size: 30px;
+                display: inline;
+                top: 3px;
+                bottom: 0px;
+            }
+
+            /* 以上是nav */
+
+            /* 以下關於不只好食 */
+            #we {
+                width: 100%;
+                height: 925px;
+            }
+
+            .meet {
+                width: 100%;
+                height: 925px;
+                justify-content: center;
+                padding: 0px;
+                margin-top: 0px;
+            }
+
+            .on {
+                width: 80px;
+                height: 250px;
+                position: absolute;
+                top: 75px;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .occur {
+                left: 0px;
+                top: 0px;
+                position: relative;
+            }
+
+            .on_title {
+                width: 30px;
+                height: 245px;
+                margin-top: 5px;
+                margin-left: 0px;
+            }
+
+
+            .title_text_meal {
+                position: absolute;
+                left: calc(50% - 25px);
+                margin-top: 50px;
+            }
+
+            .food_logo {
+                width: 50px;
+                height: 50px;
+            }
+
+            .title_text {
+                margin-left: -65px;
+                font-size: 34px;
+                position: absolute;
+                writing-mode: vertical-lr;
+                letter-spacing: 6px;
+                margin-top: 40px;
+            }
+
+            .title_text_03 {
+                margin-left: 105px;
+                font-size: 34px;
+                margin-top: 3px;
+                position: absolute;
+                writing-mode: vertical-lr;
+            }
+
+            /* 以上是關於不只好食 */
+
+            /* 以下是相遇．緣分文字 */
+            .occur_title {
+                font-size: 25px;
+                font-weight: 400;
+                position: absolute;
+                left: calc(50% - 63.5px);
+                margin-top: 40px;
+                margin-bottom: 0px;
+            }
+
+            .base {
+                margin-left: 10px;
+                font-size: 13px;
+                width: 320px;
+                text-align: center;
+                position: absolute;
+                bottom: -565px;
+                left: calc(50% - 178px);
+            }
+
+            /* 以上是相遇．緣分文字 */
+            .ball {
+                width: 280px;
+                height: 280px;
+                position: absolute;
+                bottom: 420px;
+                right: calc(50% - 140px);
+            }
+
+            .about_img {
+                margin-top: 45px;
+            }
+
+            .border1 {
+                left: 5px;
+                top: -50px
+            }
+
+            .border2 {
+                left: 5PX;
+                top: 45PX;
+            }
+
+            .border3 {
+                left: -13PX;
+                top: 10px;
+            }
+
+            /* 以上是關於 */
+
+            /* 以下是好食 */
+            /* 以下是好食swiper */
+
+            #food {
+                height: 670px;
+                position: relative;
+                padding-top: 0px;
+            }
+
+            .small_pagination {
+                position: absolute;
+                top: 43%;
+                left: calc(50% - 45.5px);
+            }
+
+            /* 以下是更改swiper 物件 */
+            .small_button01 {
+                /*右鍵*/
+                right: calc(50% - 150px);
+                top: -14%;
+                width: 50px;
+                height: 50px;
+            }
+
+            .small_button02 {
+                /*左鍵*/
+                position: absolute;
+                left: calc(50% - 150px);
+                top: -16%;
+                width: 50px;
+                height: 50px;
+            }
+
+            /* 以上是更改swiper 物件 */
+            .SwiperA {
+                width: 260px;
+                height: 400px;
+                margin-top: 22px;
+                position: absolute;
+                bottom: 23px;
+                margin-left: calc(50% - 115px);
+            }
+
+            .paper {
+                width: 230px;
+                height: 280px;
+                background-image: url(素材/紙張材質.png);
+                background-size: cover;
+            }
+
+            .menu_box {
+                width: 177px;
+                height: 265px;
+                margin-top: 17px;
+                padding: 0px 0px;
+            }
+
+            .menu {
+                font-size: 16px;
+                margin-bottom: 5px;
+            }
+
+            .menu_txt {
+                font-size: 15px;
+                letter-spacing: 2px
+            }
+
+            .SwiperB {
+                width: 285px;
+                position: absolute;
+                margin-top: -220px;
+                left: calc(50% - 145px);
+            }
+
+            .eating {
+                max-width: 350px;
+                transform: translateX(-20px);
+            }
+
+            .swiper-father {
+                width: 100%;
+                left: 0px;
+                top: 325px;
+                margin-right: 0px;
+                margin-left: 0px;
+            }
+
+            .food_title {
+                font-size: 25px;
+                position: absolute;
+                margin-left: calc(50% - 63px);
+                top: -513px;
+            }
+
+            .eating_img {
+                max-width: 315px;
+            }
+
+            .label {
+                width: 0px;
+                height: 0px;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 0px;
+                margin-left: calc(-52% - 28px);
+                margin-bottom: 0px;
+            }
+
+            /* 以上是好食swiper */
+
+            /* 以下是好食標籤 */
+            .food_label {
+                display: none;
+            }
+
+            .good_frame {
+                display: none;
+            }
+
+            .good_food {
+                font-size: 25px;
+                position: absolute;
+                writing-mode: horizontal-tb;
+                display: inline;
+                margin: 7px;
+                margin-top: -277px;
+            }
+
+            .food_frame {
+                width: 500px;
+                height: 0px;
+                display: flex;
+                align-items: center;
+            }
+
+            /* 以上是好食 */
+
+            /* 以下是好物 */
+            /* 以下是好物圖片 */
+            #article {
+                width: 100%;
+                height: 1000px;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .article_left {
+                width: 320px;
+                height: 500px;
+                position: static;
+            }
+
+            .article_right {
+                width: 320px;
+                height: 500px;
+                position: static;
+            }
+
+            .article_left_top {
+                width: 320px;
+                height: 200px;
+                position: absolute;
+                top: 120px;
+            }
+
+            .article_left_under {
+                width: 320px;
+                height: 200px;
+                position: absolute;
+                top: 330px;
+            }
+
+            .article_right_top {
+                width: 320px;
+                height: 200px;
+                position: absolute;
+                bottom: 250px;
+            }
+
+            .article_right_under {
+                width: 320px;
+                height: 200px;
+                position: absolute;
+                bottom: 35px;
+            }
+
+            .article_title {
+                font-size: 25px;
+                margin-top: 40px;
+                writing-mode: horizontal-tb;
+                left: calc(50% - 61.5px);
+                top: 0%;
+
+            }
+
+            .good {
+                font-size: 20px;
+                color: black;
+                font-weight: 200;
+                position: absolute;
+                margin-top: 65px;
+            }
+
+            .regale {
+                color: black;
+            }
+
+            .first {
+                justify-content: center;
+            }
+
+            .second {
+                justify-content: center;
+            }
+
+            .third {
+                justify-content: center;
+            }
+
+            .fourth {
+                justify-content: center;
+            }
+
+            .first_img {
+                width: 300px;
+            }
+            
+
+            .second_img {
+                width: 300px;
+            }
+
+            .third_img {
+                width: 300px;
+            }
+
+            .fourth_img {
+                width: 300px;
+            }
+
+            /* 以上好物圖片 */
+
+            /* 以下是好物遮色片 */
+
+            .mask {
+                width: 300px;
+                height: 200px;
+            }
+
+            /* 以上是好物 */
+
+            /* 以下是好空間 */
+            #space {
+                height: 300px;
+            }
+
+            .space_img {
+                display: none;
+            }
+
+            .icon_spin {
+                width: 158px;
+                height: 158px;
+
+            }
+
+            .SwiperC {
+                width: 325px;
+                height: 200px;
+                left: calc(50% - 162px);
+                display: inline;
+                top: 95px;
+            }
+
+
+            .cherish {
+                left: calc(50% - 107px);
+                top: 25px;
+                font-size: 35px;
+            }
+
+            .cherish01 {
+                position: absolute;
+                top: 45px;
+                left: 81px;
+            }
+
+            /* 以上是好空間 */
+
+            /* 以下是深入了解 */
+
+            #thorough {
+                width: 100%;
+                height: 605px;
+                align-items: center;
+                flex-direction: column-reverse;
+            }
+
+            .thooughr_Text {
+                position: absolute;
+                margin-bottom: 40px;
+                width: 315px;
+                height: 330px;
+                margin-top: 370px;
+                margin-left: 0px;
+            }
+
+            .thooughr_title {
+                list-style: none;
+                font-size: 35px;
+                position: absolute;
+                top: -270px;
+                left: 1%;
+                left: 55px;
+            }
+
+            .grasp {
+                font-size: 25px;
+                top: -228px;
+                left: 95px;
+                margin-left: 0px;
+                margin-top: 0px;
+                border-style: solid;
+                border: 0px;
+            }
+
+            .news01 {
+                margin-top: 120px;
+                font-size: 15px;
+                margin-left: 5px;
+            }
+
+            .news {
+                margin-top: 20px;
+                font-size: 15px;
+                margin-left: 5px;
+            }
+
+            .thorough_img {
+                width: 320px;
+                height: 290px;
+                position: absolute;
+                margin-top: 0px;
+                margin-right: 0px;
+            }
+
+            .map {
+                width: 320px;
+                height: 290px;
+                margin-top: -40px;
+            }
+
+            /* 以下是footer */
+
+            .footer {
+                width: 100%;
+                height: 115px;
+            }
+
+            .footer_img {
+                width: 195px;
+                height: 75px;
+                margin-top: 15px;
+            }
+
+            .footer_text {
+                font-weight: 500;
+                font-size: 18px;
+                margin-top: 80px;
+            }
+
+            .declare {
+                font-size: 20px;
+                display: none;
+            }
+
+            .footer_declare {
+                display: inline;
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <!-- 以下是nav -->
+        <div class="nav">
+            <a href="#flag0">
+                <div class="nav_logo">
+                </div> <!-- 這是logo -->
+            </a>
+            <ul class="menu_cleafix">
+                <!-- 以下是導覽列 -->
+                <li class="dropDown">
+                    <a href="#flag1">關於我們</a>
+                </li>
+                <li class="dropDown ">
+                    <a href="#flag2">好食</a>
+                </li>
+                <li class="dropDown">
+                    <a href="#flag3">好物</a>
+                </li>
+                <li class="dropDown">
+                    <a href="#flag4">好空間</a>
+                </li>
+                <div class="deep">
+                    <!-- 以下是深入了解導覽列 -->
+                    <li class="dropDown">
+                        <a href="#0">深入了解 </a>
+                        <div class="hover">
+                            <div class="hover_02">
+                                <a href="https://www.facebook.com/%E4%B8%8D%E5%8F%AA%E5%A5%BD%E9%A3%9F-108298397747893/"
+                                    target="_blank" class="FB_01">FB粉絲團</a>
+                                <a href="https://www.facebook.com/%E4%B8%8D%E5%8F%AA%E5%A5%BD%E9%A3%9F-108298397747893/"
+                                    target="_blank" class="FB">FB好物社團</a>
+                                <a href="#flag5" class="FB">營業資訊</a>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+            </ul>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#flag1" onclick="closeNav()">關於我們</a>
+                <a href="#flag2" onclick="closeNav()">好食</a>
+                <a href="#flag3" onclick="closeNav()">好物</a>
+                <a href="#flag4" onclick="closeNav()">好空間</a>
+                <div class="dropdown">
+                    <a>深入了解</a>
+                    <div class="dropdown-content">
+                        <a href="https://www.facebook.com/%E4%B8%8D%E5%8F%AA%E5%A5%BD%E9%A3%9F-108298397747893/"
+                            target="_blank" onclick="closeNav()">FB粉絲團</a>
+                        <a href="https://www.facebook.com/%E4%B8%8D%E5%8F%AA%E5%A5%BD%E9%A3%9F-108298397747893/"
+                            target="_blank" onclick="closeNav()">FB好物社團</a>
+                        <a href="#flag5" onclick="closeNav()">營業資訊</a>
+                    </div>
+                </div>
+            </div>
+            <span class="strip" onclick="openNav()">&#9776; </span>
+            </span>
+        </div>
+    </div>
+
+    <!-- 到這nav結束 -->
+
+    <!-- 以下是ban -->
+    <div class="ban wow fadeIn">
+        <div id="flag0"></div>
+        <img src="素材/banner.jpg" class="ban_img" alt="你好啊">
+    </div>
+    <!-- 以上是ban -->
+
+    <!-- 以下是content -->
+    <div class="content">
+        <!-- 以下是about -->
+        <div id="we">
+            <div id="flag1"></div>
+            <div class="meet">
+                <div class="on wow fadeInUp">
+                    <!--以下關於不只好食 -->
+                    <div class="sign">
+                        <!--以下關於不只好食 -->
+                        #SECRET BASE
+                    </div>
+                    <div class="on_title">
+                        <div class="title_text">關於</div>
+                        <div class="title_text_meal">
+                            <img src="素材/食-Logo.png" class="food_logo" alt="">
+                        </div>
+                        <div class="title_text_03">不只好食</div>
+                    </div>
+                </div><!-- 以上市關於不只好食跟標籤 -->
+                <div class="occur wow fadeInUp">
+                    <h2 class="occur_title">相遇ㆍ緣分</h2>
+                    <div class="base">
+                        &nbsp;<b>【不只好食】</b>如同店名一樣，不只是吃飯喝咖啡的地方
+                        <br>是任意、是放鬆、是無拘無束、是無受限制的空間。
+                        <br>在這裡:
+                        <br>可以自由的放風孩子，放空一下。
+                        <br>可以不受時間干擾，靈感湧現。
+                        <br>可以任意地做你自己，沒有壓力。
+                        <br>可以提升自我，追求更美好的生活。
+                        <br>
+                        <br>不管你是誰，這裏就是你的秘密基地，由你來定義。
+                        <br>
+                        <br>我們曾以為自己，終其一生都在追求一種生活
+                        <br>但轉身去做另外一個人，卻也不是不可能
+                        <br>在這裡，不受現實角色的框架
+                        <br>在這裡，你能自在地「做自己」。
+                    </div>
+                </div><!-- 以上是關於不只好食跟標籤 -->
+                <div class="ball wow fadeInUp">
+                    <div class="about_img">
+                        <div class="border border1"></div>
+                        <div class="border border2"></div>
+                        <div class="border border3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 以上是about -->
+
+        <!-- 已下是好食 -->
+        <div id="food">
+            <div id="flag2"></div>
+            <div class="food_frame wow fadeInUp">
+                <!-- Swiper -->
+                <div class="swiper-container SwiperB swiper-b">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="eating">
+                                <img src="素材/menu/漢堡咖哩蛋包飯.jpg" class="eating_img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="eating">
+                                <img src="素材/menu/炒泡麵.jpg" class="eating_img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="eating">
+                                <img src="素材/menu/滑蛋早午餐.jpg" class="eating_img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="eating">
+                                <img src="素材/menu/火腿蛋起司.jpg" class="eating_img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="eating">
+                                <img src="素材/menu/炸物.jpg" class="eating_img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="eating">
+                                <img src="素材/menu/咖啡.jpg" class="eating_img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="eating">
+                                <img src="素材/menu/飲料.jpg" class="eating_img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-father">
+                    <div class="food_title">相識ㆍ款待</div>
+                    <div class="swiper-container SwiperA swiper-a">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="paper">
+                                    <div class="menu_box">
+                                        <div class="dishes">咖哩蛋包飯</div>
+                                        <h3 class="menu">蔬食／唐揚雞／ <br>起司漢堡／日式炸豬排</h3>
+                                        <div class="menu_txt">
+                                            半熟蛋皮口感鬆軟絕妙<br>，將刀輕插入蛋包飯，粘稠鬆軟的那種細膩Q彈的口感，配上香濃的咖哩及主食，讓人回味無窮。</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="paper">
+                                    <div class="menu_box">
+                                        <div class="dishes">炒泡麵</div>
+                                        <h3 class="menu">原味/唐揚雞/<br>日式炸豬排</h3>
+                                        <div class="menu_txt">
+                                            民族小吃的炒泡麵不是單純的將麵炒開，而是有加入獨門的特製醬汁，讓麵條吸飽醬汁後再放入配料一起拌炒，香味四溢之餘，味道也著實讓人垂涎。
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="paper">
+                                    <div class="menu_box">
+                                        <div class="dishes">拼盤早午餐</div>
+                                        <h3 class="menu">香嫩滑蛋/唐揚雞/<br>起司漢堡/日式炸豬排</h3>
+                                        <div class="menu_txt">愛吃美式餐點的捧油們經典的早午餐拼盤不要錯過了！鬆軟麵包、熱騰騰的薯條、鹹淡洽好的烤蔬菜加上主食營養滿分！
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="paper">
+                                    <div class="menu_box">
+                                        <div class="dishes">熱壓吐司</div>
+                                        <h3 class="menu">火腿蛋起司/燻雞起司/<br>巧克力棉花糖</h3>
+                                        <div class="menu_txt">
+                                            吐司經過熱壓外圍有點焦脆，內夾入了燻雞肉丁、培根等配料，加入起司內香氣交融，現點現做熱壓吐司盒，爆漿口感令人愛不釋手。千變萬化的熱壓吐司，有鹹有甜任君挑選。
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="paper">
+                                    <div class="menu_box">
+                                        <div class="dishes">點心/湯品</div>
+                                        <h3 class="menu menue01"><br>點心：波浪脆薯/洋蔥圈<br>小雞球
+                                            <br><br>湯品：每日濃湯<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;小肉圓湯
+                                        </h3>
+                                        <div class="menu_txt">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="paper">
+                                    <div class="menu_box">
+                                        <div class="dishes">咖啡</div>
+                                        <h3 class="menu">好食美式咖啡/<br>焦糖瑪奇朵/<br>好食拿鐵咖啡/<br><br>風味拿鐵：榛果/海鹽焦糖/桂花/每日特調</h3>
+                                        <div class="menu_txt">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="paper">
+                                    <div class="menu_box">
+                                        <div class="dishes">茶飲</div>
+                                        <h3 class="menu">
+                                            茶飲：茉香綠茶/蜜香紅茶/鐵觀音/白桃烏龍/莓果果粒茶<br><br>鮮奶茶：蜜香紅茶拿鐵/鐵觀音拿鐵/白桃烏龍拿鐵/抹茶拿鐵<br><br>冰沙：/抹茶冰沙/摩卡奇諾冰沙/芒果雪泥冰沙
+                                        </h3>
+                                        <div class="menu_txt">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add Arrows -->
+                        <!-- Add Pagination -->
+                    </div>
+                    <div class="swiper-button-next small_button01"></div>
+                    <div class="swiper-button-prev small_button02"></div>
+                    <div class="swiper-pagination small_pagination"></div>
+                </div>
+                <div class="label">
+                    <div class="food_label">
+                        #DELICIOUS
+                    </div>
+                    <div class="good_frame"></div>
+                    <div class="good_food">好&nbsp食</div>
+                </div>
+            </div>
+        </div>
+        <!-- 以上是好食 -->
+
+        <!-- 以下是好物 -->
+        <div id="article">
+            <div id="flag3"></div>
+            <div class="article_left wow fadeInLeft">
+                <div class="article_left_top">
+                    <div class="first">
+                        <div class="first_img"></div>
+                        <div class="mask">
+                            <div class="mask_title">親子育兒</div>
+                            <div class="mask_text">親子育兒-精挑細選．育兒生活好好玩</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="article_left_under">
+                    <div class="second">
+                        <div class="second_img"></div>
+                        <div class="mask">
+                            <div class="mask_title">圖書文創</div>
+                            <div class="mask_text">從繪本到成人書籍．文化到創意</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="article_right wow fadeInRight">
+                <div class="article_right_top">
+                    <div class="third">
+                        <div class="third_img"></div>
+                        <div class="mask">
+                            <div class="mask_title">美食良品</div>
+                            <div class="mask_text">多元的選擇．實在的好味道</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="article_right_under">
+                    <div class="fourth">
+                        <div class="fourth_img"></div>
+                        <div class="mask">
+                            <div class="mask_title">家居生活</div>
+                            <div class="mask_text">品味生活．生活美學</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="article_title  wow fadeIn">
+                <li class="regale">相知ㆍ款待</li>
+                <li class="good">&nbsp好物</li>
+                <div class="box"></div>
+            </div>
+        </div>
+        <!-- 以上是好物 -->
+
+        <!-- 以下是好空間 -->
+        <div id="space">
+            <div id="flag4"></div>
+            <div class="cherish wow fadeInUp">
+                <li>相惜ㆍ零設限&nbsp</li>
+                <li class="cherish01">好空間</li>
+            </div>
+            <div class="space_img wow fadeInUp">
+                <div class="frame take">
+                    <div class="frame_img">
+                        <img src="素材/取貨icon.png" class="material" alt="">
+                        <div class="spin"></div>
+                    </div>
+                    <div class="frame_text">取貨點</div>
+                </div>
+                <div class="frame site">
+                    <div class="frame_img">
+                        <img src="素材/場地借租icon.png" class="material" alt="">
+                        <div class="spin"></div>
+                    </div>
+                    <div class="frame_text">場地借租</div>
+                </div>
+                <div class="frame lecture">
+                    <div class="frame_img">
+                        <img src="素材/文藝展覽icon.png" class="material" alt="">
+                        <div class="spin"></div>
+                    </div>
+                    <div class="frame_text">文藝展覽講座</div>
+                </div>
+                <div class="frame from">
+                    <div class="frame_img">
+                        <img src="素材/自助餐會icon.png" class="material" alt="">
+                        <div class="spin"></div>
+                    </div>
+                    <div class="frame_text">自助餐會</div>
+                </div>
+                <div class="frame proposal">
+                    <div class="frame_img">
+                        <img src="素材/合作提案icon.png" class="material" alt="">
+                        <div class="spin"></div>
+                    </div>
+                    <div class="frame_text">合作提案</div>
+                </div>
+            </div>
+            <!-- 以下是好空間swiper -->
+            <div class="swiper-container SwiperC Swiper-c">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="icon"><img src="素材/取貨icon.png" class="icon_img" alt="">
+                            <div class="icon_text">取貨點</div>
+                            <div class="icon_spin"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-slide">
+                            <div class="icon"><img src="素材/場地借租icon.png" class="icon_img" alt="">
+                                <div class="icon_text">場地借租</div>
+                                <div class="icon_spin"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-slide">
+                            <div class="icon"><img src="素材/文藝展覽icon.png" class="icon_img" alt="">
+                                <div class="icon_text">文藝展覽講座</div>
+                                <div class="icon_spin"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="icon"><img src="素材/自助餐會icon.png" class="icon_img" alt="">
+                            <div class="icon_text">自助餐會</div>
+                            <div class="icon_spin"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="icon"><img src="素材/合作提案icon.png" class="icon_img" alt="">
+                            <div class="icon_text">合作提案</div>
+                            <div class="icon_spin"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 以上是好空間 -->
+
+        <div id="thorough">
+            <div id="flag5"></div>
+            <img src="素材/兩隻兔子.png" alt="" class="rabbit wow fadeInUp">
+            <img src="素材/飛機.png" alt="" class="aircraft wow fadeInUp">
+            <div class="thooughr_Text wow fadeInUp">
+                <li class="thooughr_title ">相隨ㆍ珍惜</li>
+                <li class="grasp">深入了解</li>
+                <!-- 以下資訊 -->
+                <li class="news01">營業資訊</li>
+                <li class="news">營業時間:星期一至星期五9:30~17:00</li>
+                <li class="news">電話: 04 728 4500</li>
+                <li class="news">地址: 彰化市中山路三段359號台化福利大樓內</li>
+            </div>
+            <div class="thorough_img wow fadeInUp">
+                <img src="素材/地圖.png" alt="" class="map">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="footer_img wow fadeInUp">
+            <img src="" class="footer_im" alt="">
+        </div>
+        <div class="footer_text wow fadeInUp">
+            <li class="declare">電話: 04 728 4500</li>
+            <li class="declare">地址: 彰化市中山路三段359號台化福利大樓內</li>
+            <li class="declare"><a href="https://www.facebook.com/%E4%B8%8D%E5%8F%AA%E5%A5%BD%E9%A3%9F-108298397747893/"
+                    target="_blank">
+                    www.facebook.com/Notonlygoodfood</a></li>
+            <li class="declare footer_declare">版權聲明: ©2021不只好食All rights Reserved</li>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        var SwiperB = new Swiper('.swiper-b', {
+            loop: true,
+            followFinger: false,
+            touchRatio: 0.1,
+            longSwipesRatio: 0.1,
+        });
+
+        var SwiperA = new Swiper('.swiper-a', {
+            speed: 300,
+            touchRatio: 0.1,
+            longSwipesRatio: 0.1,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            controller: {
+                control: SwiperB,
+            }
+        });
+        SwiperA.controller.control = SwiperB;//Swiper1控制Swiper2，需要在Swiper2初始化后
+        SwiperB.controller.control = SwiperA;//Swiper2控制Swiper1，需要在Swiper1初始化后
+
+        var swiper = new Swiper('.Swiper-c', {
+            slidesPerView: 'auto',
+            loop: true,
+            spaceBetween: 15,
+            touchRatio: 0.1,
+            longSwipesRatio: 0.1,
+        })
+
+        new WOW().init();
+
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "320px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+</body>
+
+</html>
